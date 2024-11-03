@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+:root{
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Very-Dark-Blue);
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card{
+    background-color: var(--Dark-Blue);
+    width: 356px;
+    height: 310px;
+    border-radius: 16px;
+    padding: 1.25rem;
+}
+
+.card-img{
+    width: 40px;          
+    height: 40px;
+    background-color: hsla(217, 12%, 54%, 0.2);     
+    border-radius: 50%;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.card-img img{
+    width: 30%;
+    height: auto;
+}
+
+.card-title{
+    color: var(--White);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.625rem;
+}
+
+.card-text{
+    color: var(--Light-Grey);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.list-number{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+}
+
+#error{
+    display: none;
+    color: var(--Orange);
+    position: absolute;
+    top: 455px;
+}
+
+.number-item{
+    width: 45px;
+    height: 45px;
+    background-color: hsla(217, 12%, 54%, 0.2);
+    border: none;
+    color: var(--Light-Grey);
+    font-weight: 600;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.5s ease-out;
+}
+
+.number-item:hover{
+    background-color: var(--White);
+    color: var(--Dark-Blue);
+}
+
+.number-item:focus{
+    background-color: var(--Orange);
+    color: var(--Dark-Blue);
+}
+
+.btn{
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    padding: 12px 10px;
+    background-color: var(--Orange);
+    color: var(--Very-Dark-Blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.5s ease-out;
+}
+
+.btn:hover{
+    background-color: var(--White);
+}
+
+.modal{
+    display: none;
+    background-color: var(--Dark-Blue);
+    width: 360px;
+    height: 350px;
+    border-radius: 1rem;
+    padding: 1.563rem;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-header h4{
+    width: 66%;
+    padding: 0.438rem 1rem;
+    border-radius: 20px;
+    background-color: hsla(217, 12%, 54%, 0.2);
+    color: var(--Orange);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.modal-content{
+    padding: 1.2rem 0;
+}
+
+.modal-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.625rem;
+    text-align: center;
+}
+
+.modal-body h2{
+    color: var(--White);
+    font-weight: 700;
+    margin-bottom: 0.625rem;
+}
+
+.modal-body p{
+    color: var(--Light-Grey);
+    font-size: 0.875rem;
+    font-weight: 500;
+    max-width: 350px;
+    line-height: 1.5;
+}
+
+@media (min-width: 320px) and (max-width: 360px) {
+    body{
+        padding: 0.5rem;
+    }
+
+    .card{
+        height: 333px;
+    }
+
+    .modal{
+        max-width: 540px;
+    }
+
+    .modal-header h4{
+        width: 80%;
+    }
+
+    #error{
+        top: 420px;
+    }
+}
